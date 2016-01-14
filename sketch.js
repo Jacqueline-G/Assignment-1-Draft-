@@ -64,7 +64,7 @@ function draw() {
   
 //Mercury Orbit
   noFill()
-  stroke(255, 255, 255);
+  stroke(210,128,64);
   strokeWeight(1);
   ellipse(600,350,348,348)
 
@@ -108,7 +108,7 @@ function draw() {
 
 //Venus Orbit
   noFill()
-  stroke(255, 255, 255);
+  stroke(245, 184, 137);
   strokeWeight(2);
   ellipse(600,350,485,485)
 
@@ -152,7 +152,7 @@ function draw() {
 
 //Earth Orbit
   noFill()
-  stroke(255, 255, 255);
+  stroke(129, 191, 253);
   strokeWeight(3);
   ellipse(600,350,580,580)
 
@@ -196,7 +196,7 @@ function draw() {
 
 //Mars Orbit
   noFill()
-  stroke(255, 255, 255);
+  stroke(195, 81, 81);
   strokeWeight(4);
   ellipse(600,350,785,785)
 
@@ -237,5 +237,37 @@ function draw() {
   fill(215,0,0);
   strokeWeight(0);
   ellipse(planetMarsLocationX, planetMarsLocationY, planetMars-90, planetMars-90);
-  
+
+//Text
+
+textSize(45);
+fill(246,215,10);
+text("Draw Your Own Stars! (Start Clicking)", 225, 50);
+
+textSize(45);
+fill(255,255,255);
+text("Sun", 560, 370);
+
+textSize(25);
+fill(255,255,255);
+text("Mercury", 773, 360);
+
+textSize(25);
+fill(255,255,255);
+text("Venus", 820, 230);
+
+textSize(25);
+fill(255,255,255);
+text("Earth", 260, 180);
+
+textSize(25);
+fill(255,255,255);
+text("Mars", 950, 630);
+
+}
+
+function touchStarted() {
+  ellipse(touchX, touchY, 5, 5);
+  // prevent default
+  return false;
 }
